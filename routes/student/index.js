@@ -1,6 +1,6 @@
 const {Router} = require('express')
-const multer  = require('multer')
-const upload = multer({ dest: 'uploads/' })
+// const multer  = require('multer')
+// const upload = multer({ dest: 'uploads/' })
 const Student = require('../../model/student')
 const passportJWT = require('../../config/passportJWT')
 const { authMiddleware3 } = require('../../middleware')
@@ -57,13 +57,13 @@ router.get('/', passportJWT.authenticate('jwt', { failureRedirect: '/unauthorize
 
 })
 
-router.post('/resume-upload', upload.single('resume') , (req, res) => {
+// router.post('/resume-upload', upload.single('resume') , (req, res) => {
 
-    console.log(req.file)
-    return res.status(200).json({
-        message: "resume uploaded successfully!"
-    })
+//     console.log(req.file)
+//     return res.status(200).json({
+//         message: "resume uploaded successfully!"
+//     })
 
-})
+// })
 
 module.exports = router
