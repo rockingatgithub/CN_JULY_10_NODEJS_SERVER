@@ -13,12 +13,12 @@ const passportJWT = require('./config/passportJWT')
 
 const PORT = 8000
 const app = express()
-const server = http.createServer(app);
-const io = new Server(server, {
-    cors: {
-        origin: "http://localhost:3000"
-    }
-})
+// const server = http.createServer(app);
+// const io = new Server(server, {
+//     cors: {
+//         origin: "http://localhost:3000"
+//     }
+// })
 
 app.use(cors())
 app.use(express.urlencoded())
@@ -31,23 +31,23 @@ app.use(passportJWT.initialize());
 
 // chatsockets setup
 
-io.on('connection', (socket) => {
+// io.on('connection', (socket) => {
 
-    console.log("A user connected!")
+//     console.log("A user connected!")
 
-    socket.on('hello', (data) => {
-        console.log(data)
-        io.emit('hello-back', data)
+//     socket.on('hello', (data) => {
+//         console.log(data)
+//         io.emit('hello-back', data)
 
-    })
+//     })
 
 
 
-})
+// })
 
 
 
 app.use('/', require('./routes'))
-server.listen(PORT, () => {
+app.listen(PORT, () => {
     console.log("Server successfully started!")
 })
