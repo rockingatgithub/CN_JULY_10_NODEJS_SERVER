@@ -5,11 +5,11 @@ const cors = require('cors')
 const events = require('events')
 const http = require('http');
 const {Server} = require('socket.io')
+require('dotenv').config()
 const db = require('./config/mongoose')
 const Student = require('./model/student')
 // const passport = require('./config/passportLocalStrategy')
 const passportJWT = require('./config/passportJWT')
-
 
 const PORT = 8000
 const app = express()

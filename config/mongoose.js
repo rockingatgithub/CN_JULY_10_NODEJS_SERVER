@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost:27017/auth_express')
+mongoose.connect(process.env.MONGODB_ATLAS_URL)
 
 const db = mongoose.connection
 

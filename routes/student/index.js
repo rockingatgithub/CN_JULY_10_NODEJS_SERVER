@@ -26,7 +26,7 @@ router.get('/all', passportJWT.authenticate('jwt', { failureRedirect: '/unauthor
     
 })
 
-
+// Sign up route
 router.post('/', async  (req, res) => {
 
     try{
