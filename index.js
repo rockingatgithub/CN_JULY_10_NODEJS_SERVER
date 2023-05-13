@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken')
 const cors = require('cors')
 const events = require('events')
 const http = require('http');
-const {Server} = require('socket.io')
+// const {Server} = require('socket.io')
 require('dotenv').config()
 const db = require('./config/mongoose')
 const Student = require('./model/student')
