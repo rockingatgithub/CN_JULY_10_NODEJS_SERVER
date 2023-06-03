@@ -8,7 +8,6 @@ const Student = require('../../model/student');
 
 const router = Router()
 
-
 router.post('/',async  (req, res) => {
 
     try{

@@ -5,6 +5,8 @@ router.use('/student', require('./student'))
 router.use('/auth', require('./auth'))
 router.use('/interview', require('./interview'))
 router.use('/report', require('./report'))
+router.use('/admin', require('./admin'))
+
 
 
 router.get('/unauthorized', (req, res) => {
